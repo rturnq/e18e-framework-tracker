@@ -1,0 +1,11 @@
+<table>
+  <tbody>
+    <for|entry| of=$global.data.entries>
+      <tr>
+        <td>${entry.id}</td>
+        <td>${entry.name}</td>
+        <td><a href=`/server-side-rendered/${entry.id}`>View →</a></td>
+      </tr>
+    </for>
+  </tbody>
+</table>

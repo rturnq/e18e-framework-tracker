@@ -26,6 +26,13 @@ const SERVER_SIDE_RENDERED_FRAMEWORKS: ServerSideRenderedFrameworkConfig[] = [
     fullDocumentNavigation: true,
   },
   {
+    name: 'marko-run-server-side-rendered',
+    displayName: 'Marko Run Server Side Rendered',
+    package: 'app-marko-run',
+    serveScript: 'marko-run.ts',
+    fullDocumentNavigation: true,
+  },
+  {
     name: 'mastro-server-side-rendered',
     displayName: 'Mastro Server Side Rendered',
     package: 'app-mastro',

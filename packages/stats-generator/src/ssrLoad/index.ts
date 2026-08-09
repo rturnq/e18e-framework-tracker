@@ -31,6 +31,12 @@ const SSR_LOAD_FRAMEWORKS: SSRLoadFrameworkConfig[] = [
     serveScript: 'astro.ts',
   },
   {
+    name: 'marko-run-ssr-load',
+    displayName: 'Marko Run SSR Load',
+    package: 'app-marko-run',
+    serveScript: 'marko-run.ts',
+  },
+  {
     name: 'mastro-ssr-load',
     displayName: 'Mastro SSR Load',
     package: 'app-mastro',

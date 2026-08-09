@@ -89,6 +89,25 @@
           "type": "browserBaseline"
         }
       ]
+    },
+    "app": {
+      "package": "app-marko-run",
+      "buildScript": "build",
+      "buildOutputDir": "dist",
+      "measurements": [
+        {
+          "type": "ssrRequestThroughput"
+        },
+        {
+          "type": "clientSideRendered"
+        },
+        {
+          "type": "serverSideRendered"
+        },
+        {
+          "type": "ssrLoad"
+        }
+      ]
     }
   },
   {
