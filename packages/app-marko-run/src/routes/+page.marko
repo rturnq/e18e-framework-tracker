@@ -1,11 +1,13 @@
 <table>
   <tbody>
-    <for|entry| of=$global.data.entries>
-      <tr>
-        <td>${entry.id}</td>
-        <td>${entry.name}</td>
-        <td><a href=`/server-side-rendered/${entry.id}`>View →</a></td>
-      </tr>
-    </for>
+    <await|entries|=$global.data.entries>
+      <for|entry| of=entries>
+        <tr>
+          <td>${entry.id}</td>
+          <td>${entry.name}</td>
+          <td><a href=`/server-side-rendered/${entry.id}`>View →</a></td>
+        </tr>
+      </for>
+    </await>
   </tbody>
 </table>
