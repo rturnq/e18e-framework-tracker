@@ -1,0 +1,19 @@
+{
+  "name": "starter-marko-run",
+  "description": "The default Marko starter app with TypeScript",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "marko-run",
+    "build": "marko-run build",
+    "preview": "marko-run preview",
+    "start": "node --enable-source-maps ./dist/index.mjs"
+  },
+  "dependencies": {
+    "marko": "6.3.34"
+  },
+  "devDependencies": {
+    "@marko/run": "0.11.8"
+  }
+}

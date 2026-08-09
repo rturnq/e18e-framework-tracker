@@ -65,6 +65,33 @@
     }
   },
   {
+    "name": "marko-run",
+    "displayName": "Marko Run",
+    "frameworkPackage": "@marko/run",
+    "focusedFramework": false,
+    "starter": {
+      "package": "starter-marko-run",
+      "buildScript": "build",
+      "buildOutputDir": "dist",
+      "measurements": [
+        {
+          "type": "install",
+          "runFrequency": 5
+        },
+        {
+          "type": "build",
+          "runFrequency": 5
+        },
+        {
+          "type": "dependencies"
+        },
+        {
+          "type": "browserBaseline"
+        }
+      ]
+    }
+  },
+  {
     "name": "mastro",
     "displayName": "Mastro",
     "frameworkPackage": "jsr:@mastrojs/mastro",
