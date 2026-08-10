@@ -35,12 +35,7 @@ async function runWebHandler(
       },
     },
   )
-  const response = await handler(request, {})
-  if (!response) {
-    throw new Error(
-      `Handler returned no response for ${SSR_REQUEST_HANDLER_THROUGHPUT_PATH}`,
-    )
-  }
+  const response = await handler(request)
   const buffer = await response.arrayBuffer()
   const body = collect ? new TextDecoder().decode(buffer) : ''
   return { body, length: buffer.byteLength, status: response.status }

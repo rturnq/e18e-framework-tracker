@@ -10,7 +10,11 @@ export async function buildMarkoRunHandler(): Promise<ServerRenderHandler> {
 
   // Importing the built entry registers the router on globalThis.
   await importWithoutListening(pathToFileURL(entryPath).href)
-  const markoRun: RuntimeModule = globalThis.__marko_run__
+  const { fetch } = globalThis.__marko_run__ as RuntimeModule
 
-  return { type: 'web', handler: markoRun.fetch }
+  return {
+    type: 'web',
+    // fetch resolves to void only when no route matches, never for a built route.
+    handler: (request) => fetch(request, {}) as Promise<Response>,
+  }
 }
