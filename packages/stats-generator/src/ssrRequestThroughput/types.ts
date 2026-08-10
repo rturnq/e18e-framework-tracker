@@ -1,6 +1,9 @@
 import type { IncomingMessage, ServerResponse } from './mock-http.ts'
 
-export type WebServerRenderHandler = (request: Request) => Promise<Response>
+export type WebServerRenderHandler = (
+  request: Request,
+  platform: object,
+) => Promise<Response | void>
 
 export type NodeServerRenderHandler = (
   req: IncomingMessage,
