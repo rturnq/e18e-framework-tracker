@@ -8,13 +8,11 @@ import type { ServerRenderHandler } from '../types.ts'
 export async function buildMarkoRunHandler(): Promise<ServerRenderHandler> {
   const entryPath = join(packagesDir, 'app-marko-run', 'dist', 'index.mjs')
 
-  // Importing the built entry registers the router on globalThis.
   await importWithoutListening(pathToFileURL(entryPath).href)
   const { fetch } = globalThis.__marko_run__ as RuntimeModule
 
   return {
     type: 'web',
-    // fetch resolves to void only when no route matches, never for a built route.
     handler: (request) => fetch(request, {}) as Promise<Response>,
   }
 }
