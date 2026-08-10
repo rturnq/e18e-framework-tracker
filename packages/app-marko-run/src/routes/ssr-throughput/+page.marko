@@ -1,0 +1,12 @@
+<table>
+  <tbody>
+    <await|entries|=$global.data.entries>
+      <for|entry| of=entries>
+        <tr>
+          <td>${entry.id}</td>
+          <td>${entry.name}</td>
+        </tr>
+      </for>
+    </await>
+  </tbody>
+</table>

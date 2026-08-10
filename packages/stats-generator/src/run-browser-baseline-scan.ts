@@ -30,6 +30,7 @@ const IGNORED_BUILD_FILES = [
   '/env.js',
   '/handler.js',
   '/index.js',
+  '/index.mjs',
   '/required-server-files.js',
   '/shims.js',
 ]

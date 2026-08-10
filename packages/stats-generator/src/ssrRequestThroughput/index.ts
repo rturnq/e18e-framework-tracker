@@ -1,6 +1,7 @@
 import { runBenchmark } from './run-benchmark.ts'
 import { buildAstroHandler } from './handlers/astro.ts'
 import { buildBaselineHtmlHandler } from './handlers/baseline-html.ts'
+import { buildMarkoRunHandler } from './handlers/marko-run.ts'
 import { buildMastroHandler } from './handlers/mastro.ts'
 import { buildNuxtHandler } from './handlers/nuxt.ts'
 import { buildSvelteKitHandler } from './handlers/sveltekit.ts'
@@ -34,6 +35,12 @@ const SSR_REQUEST_THROUGHPUT_FRAMEWORKS: SSRRequestThroughputFrameworkConfig[] =
       displayName: 'Astro SSR Request Handler Throughput',
       package: 'app-astro',
       buildHandler: buildAstroHandler,
+    },
+    {
+      name: 'marko-run-ssr-request-throughput',
+      displayName: 'Marko Run SSR Request Handler Throughput',
+      package: 'app-marko-run',
+      buildHandler: buildMarkoRunHandler,
     },
     {
       name: 'mastro-ssr-request-throughput',

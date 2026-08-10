@@ -27,6 +27,13 @@ const CLIENT_SIDE_RENDERED_FRAMEWORKS: ClientSideRenderedFrameworkConfig[] = [
     fullDocumentNavigation: true,
   },
   {
+    name: 'marko-run-client-side-rendered',
+    displayName: 'Marko Run Client Side Rendered',
+    package: 'app-marko-run',
+    serveScript: 'marko-run.ts',
+    fullDocumentNavigation: true,
+  },
+  {
     name: 'next-client-side-rendered',
     displayName: 'Next.js Client Side Rendered',
     package: 'app-next-js',
